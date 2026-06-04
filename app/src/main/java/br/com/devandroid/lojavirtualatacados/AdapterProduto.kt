@@ -36,7 +36,7 @@ class AdapterProduto(): RecyclerView.Adapter<AdapterProduto.ViewHolderProduto>()
               binding.tvTtitulo.text = produto.title
               binding.tvDescricao.text = produto.description
               binding.tvPreco.text = "R$ ${produto.price}"
-              Glide.with(itemView.context).load(produto.images).into(binding.ivProduto)
+              Glide.with(itemView.context).load(produto.thumbnail).into(binding.ivProduto)
         }
     }
 
