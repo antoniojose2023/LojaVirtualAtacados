@@ -1,5 +1,6 @@
 package br.com.devandroid.lojavirtualatacados
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -46,6 +47,11 @@ class MainActivity : AppCompatActivity() {
                }
         }
 
+        adapterProduto = AdapterProduto{ produto ->
+             val intent = Intent(this, DetalhesProdutoMainActivity::class.java)
+             intent.putExtra("produto", produto)
+             startActivity(intent)
+        }
 
     }
 

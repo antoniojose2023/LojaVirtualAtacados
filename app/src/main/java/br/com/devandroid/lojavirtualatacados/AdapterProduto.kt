@@ -9,7 +9,7 @@ import br.com.devandroid.lojavirtualatacados.model.Product
 import com.bumptech.glide.Glide
 
 
-class AdapterProduto(): RecyclerView.Adapter<AdapterProduto.ViewHolderProduto>() {
+class AdapterProduto(val onClick: (Product) -> Unit = {}): RecyclerView.Adapter<AdapterProduto.ViewHolderProduto>() {
     private var listaProduto = mutableListOf<Product>()
 
     @SuppressLint("NotifyDataSetChanged")
@@ -37,6 +37,10 @@ class AdapterProduto(): RecyclerView.Adapter<AdapterProduto.ViewHolderProduto>()
               binding.tvDescricao.text = produto.description
               binding.tvPreco.text = "R$ ${produto.price}"
               Glide.with(itemView.context).load(produto.thumbnail).into(binding.ivProduto)
+
+              binding.root.setOnClickListener {
+                   onClick(produto)
+              }
         }
     }
 
