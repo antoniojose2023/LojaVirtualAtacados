@@ -14,6 +14,8 @@ import kotlin.math.log
 class DetalhesProdutoMainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityDetalhesProdutoMainBinding.inflate(layoutInflater) }
 
+    private lateinit var produto: Product
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,6 +26,20 @@ class DetalhesProdutoMainActivity : AppCompatActivity() {
             insets
         }
 
+        val bundle = intent.extras
+
+        if(bundle != null){
+            produto = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
+                bundle.getParcelable("produto", Product::class.java)!!
+
+            }else{
+                bundle.getParcelable("produto")!!
+
+            }
+
+            Log.i("TAG", "Detalhes do produto: ${produto.title} ")
+
+        }
 
 
     }
