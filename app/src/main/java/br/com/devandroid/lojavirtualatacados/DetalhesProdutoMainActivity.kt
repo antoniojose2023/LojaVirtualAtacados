@@ -1,5 +1,6 @@
 package br.com.devandroid.lojavirtualatacados
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -40,6 +41,12 @@ class DetalhesProdutoMainActivity : AppCompatActivity() {
 
             Log.i("TAG", "Detalhes do produto: ${produto.title} ")
             exibirDetalhesProduto(produto)
+        }
+
+        binding.btVoltar.setOnClickListener {
+                startActivity(Intent(this, MainActivity::class.java))
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                finish()
         }
 
 
