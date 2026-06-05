@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import br.com.devandroid.lojavirtualatacados.databinding.ActivityDetalhesProdutoMainBinding
 import br.com.devandroid.lojavirtualatacados.model.Product
+import com.bumptech.glide.Glide
 import kotlin.math.log
 
 class DetalhesProdutoMainActivity : AppCompatActivity() {
@@ -38,9 +39,24 @@ class DetalhesProdutoMainActivity : AppCompatActivity() {
             }
 
             Log.i("TAG", "Detalhes do produto: ${produto.title} ")
-
+            exibirDetalhesProduto(produto)
         }
 
+
+    }
+
+    fun exibirDetalhesProduto(produto: Product){
+
+         with(binding){
+             Glide.with(this@DetalhesProdutoMainActivity).load(produto.thumbnail).into(ivDetalhesProduto)
+
+             tvTituloDetalhesProduto.text = produto.title
+             tvDescricaoDetalhesProduto.text = produto.description
+             btCategoria.text = produto.category
+             btPreco.text = "R$ ${produto.price}"
+             btAvaliacao.text = produto.rating.toString()
+             btEstoque.text = produto.stock.toString()
+         }
 
     }
 }
