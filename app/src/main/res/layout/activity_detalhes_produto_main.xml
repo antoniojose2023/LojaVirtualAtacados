@@ -88,7 +88,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:backgroundTint="@color/black"
         android:text="beauty"
+        android:clickable="false"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
@@ -108,8 +110,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:backgroundTint="@color/green"
         android:text="R$ 9.99"
-
+        android:clickable="false"
         app:layout_constraintBottom_toBottomOf="@+id/tvPrecoDetalhesProduto"
         app:layout_constraintStart_toEndOf="@+id/tvPrecoDetalhesProduto"
         app:layout_constraintTop_toTopOf="@+id/tvPrecoDetalhesProduto" />
@@ -129,7 +132,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:backgroundTint="@color/gray"
         android:text="2.56"
+        android:clickable="false"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
@@ -140,6 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
+        android:backgroundTint="@color/blue"
         android:text="Em estoque :"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -150,6 +156,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="99"
+        android:clickable="false"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="@+id/textView7" />
