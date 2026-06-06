@@ -1,4 +1,4 @@
-package br.com.devandroid.lojavirtualatacados
+package br.com.devandroid.lojavirtualatacados.presentation.view
 
 import android.content.Intent
 import android.os.Build
@@ -8,10 +8,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import br.com.devandroid.lojavirtualatacados.R
 import br.com.devandroid.lojavirtualatacados.databinding.ActivityDetalhesProdutoMainBinding
 import br.com.devandroid.lojavirtualatacados.model.Product
 import com.bumptech.glide.Glide
-import kotlin.math.log
 
 class DetalhesProdutoMainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityDetalhesProdutoMainBinding.inflate(layoutInflater) }
