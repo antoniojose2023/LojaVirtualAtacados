@@ -1,4 +1,4 @@
-package br.com.devandroid.lojavirtualatacados
+package br.com.devandroid.lojavirtualatacados.presentation
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.devandroid.lojavirtualatacados.databinding.ItemProdutoBinding
 import br.com.devandroid.lojavirtualatacados.model.Product
 import com.bumptech.glide.Glide
-
 
 class AdapterProduto(val onClick: (Product) -> Unit = {}): RecyclerView.Adapter<AdapterProduto.ViewHolderProduto>() {
     private var listaProduto = mutableListOf<Product>()
